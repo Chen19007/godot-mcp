@@ -1,0 +1,22 @@
+{
+  "name": "godot-check",
+  "version": "1.0.0",
+  "description": "Godot GDScript 自动化检查工具",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test-server.cjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "keywords": [
+    "godot",
+    "gdscript",
+    "mcp",
+    "game-engine"
+  ],
+  "author": "",
+  "license": "MIT"
+}

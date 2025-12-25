@@ -1,0 +1,25 @@
+# Godot MCP Server Proxy Configuration
+# 直接连接配置（不需要经过代理服务器）
+
+# 使用方式：直接在 MCP Proxy 配置中引用此文件
+# 或者复制下面的配置到 config.yaml
+
+proxy:
+  server:
+    host: "0.0.0.0"
+    port: 8082
+
+paths:
+  godot:
+    description: "Godot GDScript 自动化检查工具"
+    lazy_start: false
+    servers:
+      - name: "godot-check"
+        description: "Godot 项目检查工具（lint + format + export validation）"
+        transport: "stdio"
+        command: "node"
+        args:
+          - "E:/project/typescript/godot-mcp/index.js"
+        environment:
+          GODOT_BIN: "godot"
+        disabled: false
