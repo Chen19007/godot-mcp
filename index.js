@@ -278,7 +278,7 @@ async function handleTool(toolName, args) {
 
       try {
         const { stdout, stderr } = await execAsync(
-          `"${GODOT_BIN}" --headless --path "${projectPath}" --export-pack "${targetPreset}" "${targetOutput}"`,
+          `godot --headless --path "${projectPath}" --export-pack "${targetPreset}" "${targetOutput}"`,
           { cwd: projectPath, timeout: 120000 }
         );
 
